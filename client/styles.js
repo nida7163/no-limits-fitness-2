@@ -1,37 +1,56 @@
 module.exports = {
-  
+
   loginStyle: {
-    backgroundColor: "white"
+    backgroundImage: "url('/img/gym.jpg')",
+    backgroundSize:"center center no-repeat",
+    border:"10px #DAA520 solid",
+    fontFamily:"Nova Flat",
+    color:"red"
   },
   signupStyle: {
-    backgroundColor: "white"
+    backgroundColor: "#DAA520",
+    fontFamily:"Nova Flat",
   },
   headerStyle: {
     paddingTop: 20
-  }, 
+  },
   dashNavStyle: {
     paddingTop: 30,
-    paddingBottom: 20
+    paddingBottom: 20,
+    fontFamily:"Nova Flat",
   },
   drawerStyle: {
-    backgroundImage: "url('img/background.jpg')"
+    backgroundColor:"black",
+    fontFamily:"Nova Flat",
   },
   linkStyle: {
-    color: "white",
-    fontFamily: 'Raleway',
+    color: "red",
+    fontFamily: 'Nova Flat',
+    backgroundColor:"#DAA520",
     padding: 10
-  }, 
+  },
   homepageStyle: {
-    fontFamily: "Raleway",
+    fontFamily: 'Nova Flat',
+    color:"#DAA520",
+    backgroundColor:"black",
+    padding: 10,
+    fontSize: 20
+  },
+  buttonStyle: {
+    fontFamily: 'Nova Flat',
+    backgroundColor:"#DAA520",
+    color:"#FF0000",
+    border:"2px #FF0000 solid ",
     padding: 10,
     fontSize: 20
   },
   profileTitleStyle: {
     textAlign: "center",
-    fontFamily: 'Raleway'
+    fontFamily: 'Nova Flat',
+    backgroundColor:"#DAA520",
   },
   dropdownStyle: {
-    fontFamily: 'Raleway',
+    fontFamily: 'Nova Flat',
     fontSize: 20,
     padding: 10
   },
@@ -39,42 +58,43 @@ module.exports = {
     paddingBottom: 10
   },
   routineName: {
-    fontFamily: 'Raleway',
+    fontFamily: 'Nova Flat',
     fontSize: 20,
-    textAlign: "center"
+    textAlign: "center",
+    color:"red"
   },
   selectTitle: {
-    fontFamily: 'Raleway',
+    fontFamily: 'Nova Flat',
     textAlign: "center"
   },
   cardTextStyle: {
-    fontFamily: 'Raleway',
+    fontFamily: 'Nova Flat',
     fontSize: 20,
     textAlign: "center",
-    padding: 20
+    padding: 20,
   },
   logRoutineHeaderStyle: {
-    fontFamily: "Raleway",
+    fontFamily: 'Nova Flat',
     padding: 10
   },
   logRoutineComponentStyle: {
-    fontFamily: "Raleway",
+    fontFamily: 'Nova Flat',
     paddingLeft: 10,
     paddingRight: 10
   },
   addRepComponentStyle: {
-    fontFamily: "Raleway",
+    fontFamily: 'Nova Flat',
     paddingLeft: 15,
     paddingTop: 15
   },
   progressDropDown: {
     position: "relative",
     left: 150,
-    fontFamily: 'Raleway',
+    fontFamily: 'Nova Flat',
     fontSize: 20
   },
   menuDropdown: {
-    fontFamily: 'Raleway',
+    fontFamily: 'Nova Flat',
     fontSize: 14,
     padding: 5
 

@@ -20,9 +20,9 @@ export default class SignUpPage extends Component {
     let password = document.getElementById("signup-password").value;
     Accounts.createUser({username: name, password: password}, (err) => {
       if(err){
-        Store.dispatch(setSnackBar(true, err.reason, '#F44336'));
+        Store.dispatch(setSnackBar(true, err.reason, '#FF0000'));
       } else {
-        Store.dispatch(setSnackBar(true, 'You\'ve signed up successfully.', '#4CAF50'));
+        Store.dispatch(setSnackBar(true, 'You\'ve signed up successfully.', '#DAA520'));
         Meteor.call('addUser');
         browserHistory.push('/dashboard');
       }
@@ -32,7 +32,8 @@ export default class SignUpPage extends Component {
   render(){
 
     const buttonStyle = {
-      marginTop: "20px"
+      marginTop: "20px",
+      backgroundColor:"#DAA520"
     }
 
     return (

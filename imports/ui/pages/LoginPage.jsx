@@ -20,9 +20,9 @@ export default class LoginPage extends Component {
     let password = document.getElementById('login-password').value;
     Meteor.loginWithPassword(name, password, (err) => {
       if(err){
-        Store.dispatch(setSnackBar(true, err.reason, '#F44336'));
+        Store.dispatch(setSnackBar(true, err.reason, '#FF0000'));
       } else {
-        Store.dispatch(setSnackBar(true, 'You\'ve been signed in successfully.', '#4CAF50'));
+        Store.dispatch(setSnackBar(true, 'You\'ve been signed in successfully.', '#DAA520'));
         browserHistory.push('/dashboard');
       }
     });
@@ -31,7 +31,7 @@ export default class LoginPage extends Component {
   render(){
 
     const buttonStyle = {
-      marginTop: "20px"
+      marginTop: "20px",
     }
 
     return (
