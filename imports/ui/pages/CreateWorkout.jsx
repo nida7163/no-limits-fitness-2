@@ -9,11 +9,11 @@ import { browserHistory } from 'react-router';
 // Import React Grid System
 import { Container, Row, Col, Visible, Hidden } from 'react-grid-system';
 
-// Import Material-ui 
+// Import Material-ui
 import { Card, CardActions, CardHeader, CardText } from 'material-ui/Card';
 import RaisedButton from 'material-ui/RaisedButton';
 import Snackbar from 'material-ui/Snackbar';
-  
+
 // Import Components
 import AddRoutineName from '../components/AddRoutineName';
 import AddWorkoutPrimary from '../components/AddWorkoutPrimary';
@@ -78,7 +78,7 @@ class CreateWorkout extends Component {
 
     // // Get current workouts array
     // let workoutsArray = this.state.workouts;
-    
+
     // // Remove unwanted Workout using its position in the Workouts array
     // workoutsArray.splice(iOfWorkout, 1);
 
@@ -101,7 +101,7 @@ class CreateWorkout extends Component {
     // Get current workouts array
     let workoutsArray = this.state.workouts;
 
-    // Set object at correct array position to the new name value 
+    // Set object at correct array position to the new name value
     workoutsArray[iOfWorkout].workoutName = nameOfWorkout;
 
     // Update the state
@@ -127,7 +127,7 @@ class CreateWorkout extends Component {
 
     // Update the state
     this.setState({workouts: workoutsArray});
-    
+
   }
 
   _removeSelectedExercise(iOfWorkout, iOfExercise){
@@ -234,15 +234,15 @@ class CreateWorkout extends Component {
     Meteor.call('addRoutine', this.state, function(err, res){
 
       if(err){
-        Store.dispatch(setSnackBar(true, 'Error. Routine could not be uploaded.', '#F44336'));
+        Store.dispatch(setSnackBar(true, 'Error. Routine could not be uploaded.', '#FF0000'));
       }
       else{
         // Notify User that they submitted successfully
-        Store.dispatch(setSnackBar(true, 'Routine created successfully.', '#4CAF50'));
+        Store.dispatch(setSnackBar(true, 'Routine created successfully.', '#DAA520'));
         // Move to the Dashboard
-        browserHistory.push({ 
+        browserHistory.push({
           pathname: '/dashboard'
-        });  
+        });
       }
 
     });
@@ -251,7 +251,7 @@ class CreateWorkout extends Component {
 
   _cancelRoutine(event, index, value){
     // Cancel takes you back to dashboard, nothing is saved to DB
-    browserHistory.push({ 
+    browserHistory.push({
       pathname: '/dashboard'
     });
   }
@@ -278,7 +278,7 @@ class CreateWorkout extends Component {
 
               {/* ++++++++++ ITERATE OVER WORKOUTS ++++++++++ */}
               {this.state.workouts.map(function(search, i) {
-                
+
                 // First, render the primary workout
                 if(i==0){
                   return (
@@ -335,7 +335,7 @@ class CreateWorkout extends Component {
             </CardText>
           </Card>
         </Row>
-        
+
 
         <br/>
 
@@ -346,7 +346,7 @@ class CreateWorkout extends Component {
         <Row>
           <center>
             <Row>
-              <RaisedButton label="Submit" primary={true} onClick={this._uploadRoutine.bind(this)} />
+              <RaisedButton label="Submit" primary={false} onClick={this._uploadRoutine.bind(this)} />
               <span> </span>
               <RaisedButton label="Cancel" onClick={this._cancelRoutine.bind(this)} />
             </Row>
@@ -360,5 +360,3 @@ class CreateWorkout extends Component {
 }
 
 export default CreateWorkout;
-
-

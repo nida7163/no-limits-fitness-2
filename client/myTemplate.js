@@ -50,7 +50,7 @@ Template.myTemplate.topGenresChart = function() {
     title: {
       text: title
     },
-    
+
     plotOptions: {
       line: {
         allowPointSelect: true,
