@@ -6,7 +6,7 @@ import { browserHistory } from 'react-router';
 // Import React Grid System
 import { Container, Row, Col, Visible, Hidden } from 'react-grid-system';
 
-// Import Material-ui 
+// Import Material-ui
 import RaisedButton from 'material-ui/RaisedButton';
 import Snackbar from 'material-ui/Snackbar';
 
@@ -40,7 +40,7 @@ class LogWorkout extends Component {
 
     // Move off the page if nothing was selected in the `/workout/select` route
     if(this.props.location.query.workoutObj == null){
-      browserHistory.push({ 
+      browserHistory.push({
         pathname: '/workout/select'
       });
     }
@@ -71,7 +71,7 @@ class LogWorkout extends Component {
             for(let j=0; j < res[i].weights.length; j++){
               // Set the prevWorkoutWeights for the exercises via position
               let prevRepWeight = res[i].weights[j];
-              exercisesArray[i].prevWorkoutWeights.push(prevRepWeight); 
+              exercisesArray[i].prevWorkoutWeights.push(prevRepWeight);
             }
           }
           // Update the state
@@ -91,14 +91,14 @@ class LogWorkout extends Component {
       for(let j=0; j < exercisesArray[i].reps.length; j++){
         exercisesArray[i].currentWorkoutWeights.push("");
       }
-    } 
+    }
     // Update the state
     this.setState({exercises: exercisesArray});
   }
 
 
   _editCurrentWorkoutDate(date){
-    // Updates the current workout's date 
+    // Updates the current workout's date
     this.setState({currentWorkoutDate: date});
   }
 
@@ -133,7 +133,7 @@ class LogWorkout extends Component {
       // Push to Log weight array
       currentLog.push(logThisEx)
     }
-    
+
 
     // Pass in the data for the backend
     let data = {
@@ -146,15 +146,15 @@ class LogWorkout extends Component {
     Meteor.call('logWorkout', data, function(err, res){
 
       if(err){
-        Store.dispatch(setSnackBar(true, 'Error. Workout could not be logged!', '#F44336'));
+        Store.dispatch(setSnackBar(true, 'Error. Workout could not be logged!', '#FF0000'));
       }
       else{
         // Notify User that they submitted successfully
-        Store.dispatch(setSnackBar(true, 'Workout logged successfully.', '#4CAF50'));
+        Store.dispatch(setSnackBar(true, 'Workout logged successfully.', '#DAA520'));
         // Move to the Dashboard
-        browserHistory.push({ 
+        browserHistory.push({
           pathname: '/dashboard'
-        });  
+        });
       }
 
     });
@@ -166,7 +166,7 @@ class LogWorkout extends Component {
 
   _cancelWorkout(){
     // Cancel takes you back to dashboard, no saving of progress in DB
-    browserHistory.push({ 
+    browserHistory.push({
       pathname: '/dashboard'
     });
   }
@@ -225,7 +225,7 @@ class LogWorkout extends Component {
         <Row>
           <center>
             <Row>
-              <RaisedButton label="Submit" primary={true} onClick={this._uploadWorkout.bind(this)} />
+              <RaisedButton label="Submit" primary={false} onClick={this._uploadWorkout.bind(this)} />
               <span> </span>
               <RaisedButton label="Cancel" onClick={this._cancelWorkout.bind(this)} />
             </Row>
@@ -239,4 +239,3 @@ class LogWorkout extends Component {
 };
 
 export default LogWorkout;
-

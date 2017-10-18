@@ -34,7 +34,7 @@ class AddExercisePrimary extends Component {
   }
 
   _handleClick(){
-    // Add another Excerise to the selected Workout 
+    // Add another Excerise to the selected Workout
     this.props._addAnotherExercise(this.props._iOfWorkout);
   }
 
@@ -59,7 +59,7 @@ class AddExercisePrimary extends Component {
 
                 _iOfWorkout={this.props._iOfWorkout}
                 _iOfExercise={this.props._iOfExercise}
-                
+
                 _editExerciseUnits={this.props._editExerciseUnits.bind(this)}
               />
             </Container>
@@ -93,7 +93,7 @@ class AddExercisePrimary extends Component {
               else{
                 return(
                   <div key={"workout-" + this.props._iOfWorkout + "-excercise-" + this.props._iOfExercise + "-rep-" + i}>
-                    
+
                     <AddRepSecondary
                       _iOfWorkout={this.props._iOfWorkout}
                       _iOfExercise={this.props._iOfExercise}
@@ -117,4 +117,4 @@ class AddExercisePrimary extends Component {
 }
 
 
-export default AddExercisePrimary;                          
+export default AddExercisePrimary;

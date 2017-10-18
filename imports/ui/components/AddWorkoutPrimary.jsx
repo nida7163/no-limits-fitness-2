@@ -41,7 +41,7 @@ class AddWorkoutPrimary extends Component {
 
   render(){
     return(
-      
+
       <Card>
         <CardHeader
           actAsExpander={false}
@@ -95,7 +95,7 @@ class AddWorkoutPrimary extends Component {
 
                       _iOfWorkout={this.props._iOfWorkout}
                       _iOfExercise={i}
-                      
+
                       _removeSelectedExercise={this.props._removeSelectedExercise.bind(this)}
                       _editExerciseName={this.props._editExerciseName.bind(this)}
                       _editExerciseUnits={this.props._editExerciseUnits.bind(this)}
@@ -120,4 +120,4 @@ class AddWorkoutPrimary extends Component {
 }
 
 
-export default AddWorkoutPrimary;                          
+export default AddWorkoutPrimary;

@@ -21,7 +21,7 @@ class UserProfile extends Component{
 
 	constructor(props){
     super(props);
-    this.state = {routine_ids : [], 
+    this.state = {routine_ids : [],
     		routines: [],
     		value: "",
     		currentRoutineName: "",
@@ -38,17 +38,17 @@ class UserProfile extends Component{
 
 	handleChange(event,index,value){
 
-		//console.log(event, index, value)		
+		//console.log(event, index, value)
 		Meteor.call("getRoutineName", value, (err, res) => {
-			this.setState({value: value, currentRoutineName: res});	
+			this.setState({value: value, currentRoutineName: res});
 			console.log(this.state)
 
 		});
 		Meteor.call("setCurrentRoutine", value, (err,res) =>{
 			console.log(value);
 			console.log("updated current routine");
-		})		
-	} 
+		})
+	}
 
 	handleSubmit(e){
 		e.preventDefault();
@@ -118,7 +118,7 @@ class UserProfile extends Component{
 
 		}
 
-		return routines.map((routine) => {			
+		return routines.map((routine) => {
 			return (
 				<MenuItem style={style.dropdownStyle} key={routine._id} value={routine._id} primaryText={routine.routineName}/>
 			);
@@ -129,20 +129,20 @@ class UserProfile extends Component{
     browserHistory.push('/workout/create');
   }
 
-	 
+
 	render (){
 
 		return (
 
 			<Container>
-				
+
 				<div>
 					<Card>
-						
+
 						<CardTitle title="Welcome back, you're looking great. Now let's select a routine." style={style.profileTitleStyle} />
-						
+
 				    <Row style={style.paddingStyle}>
-			    		<CardTitle style={style.profileTitleStyle} title={"Your Current Routine: " + this.state.currentRoutineName}  />	
+			    		<CardTitle style={style.profileTitleStyle} title={"Your Current Routine: " + this.state.currentRoutineName}  />
 				    	<center>
 				    		<DropDownMenu style={style.dropdownStyle} value={this.state.value} onChange={this.handleChange.bind(this)}>
 				    			{this.renderRoutines()}
@@ -158,20 +158,20 @@ class UserProfile extends Component{
 					    		If you haven't already, create a new Routine!
 					    	</center>
 				    	</Row>
-				    	
+
 				    	<br />
 
 				    	<Row>
 				    		<div>
 						    	<center>
-						    		<RaisedButton label="Create New Routine" secondary={true}  onClick={this._goToCreateWorkout}/>
+						    		<RaisedButton label="Create New Routine" secondary={false} style={style.buttonStyle}  onClick={this._goToCreateWorkout}/>
 				         		<i> </i>
-				         			<RaisedButton label="Go back to Dashboard" primary={true}  href="/dashboard"/>
+				         			<RaisedButton label="Go back to Dashboard" primary={false} style={style.buttonStyle}  href="/dashboard"/>
 						    	</center>
 					    	</div>
 				    	</Row>
 		        </CardText>
-			
+
 					</Card>
 				</div>
 				<br/>
@@ -181,7 +181,7 @@ class UserProfile extends Component{
 						<Container style={style.profileTitleStyle} >
 
 							<CardTitle title="Let's update your information." style={style.profileTitleStyle} />
-							
+
 							<br/>
 
 				    	<Row>
@@ -224,7 +224,7 @@ class UserProfile extends Component{
 				         <RaisedButton
 				            id="submit"
 				            label="submit"
-				            primary={true}
+				            primary={false}
 				            onTouchTap={this.handleSubmit.bind(this)}
 				         />
 				         <br/>
@@ -246,7 +246,7 @@ class UserProfile extends Component{
 
 		);
 	}
-	
+
 };
 
 export default UserProfile;

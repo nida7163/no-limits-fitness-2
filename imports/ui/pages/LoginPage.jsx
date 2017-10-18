@@ -8,6 +8,7 @@ import Store from '../../reducers/index';
 import style from '../../../client/styles.js';
 
 
+
 export default class LoginPage extends Component {
   constructor(props){
     super(props);
@@ -20,9 +21,9 @@ export default class LoginPage extends Component {
     let password = document.getElementById('login-password').value;
     Meteor.loginWithPassword(name, password, (err) => {
       if(err){
-        Store.dispatch(setSnackBar(true, err.reason, '#F44336'));
+        Store.dispatch(setSnackBar(true, err.reason, '#FF0000'));
       } else {
-        Store.dispatch(setSnackBar(true, 'You\'ve been signed in successfully.', '#4CAF50'));
+        Store.dispatch(setSnackBar(true, 'You\'ve been signed in successfully.', '#DAA520'));
         browserHistory.push('/dashboard');
       }
     });
@@ -31,7 +32,11 @@ export default class LoginPage extends Component {
   render(){
 
     const buttonStyle = {
-      marginTop: "20px"
+      marginTop: "20px",
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4c39c191a74fd5724a40197e9296676ea61d00f2
     }
 
     return (
@@ -59,8 +64,8 @@ export default class LoginPage extends Component {
             id="login-button"
             label="login"
             fullWidth={true}
-            primary={true}
-            style={buttonStyle}
+            primary={false}
+            overlayStyle={style.overlayStyle}
             onTouchTap={this.handleSubmit}
           />
           <br />

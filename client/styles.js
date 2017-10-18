@@ -1,5 +1,5 @@
 module.exports = {
-  
+
   loginStyle: {
     backgroundColor: "white"
   },
@@ -8,7 +8,7 @@ module.exports = {
   },
   headerStyle: {
     paddingTop: 20
-  }, 
+  },
   dashNavStyle: {
     paddingTop: 30,
     paddingBottom: 20
@@ -20,7 +20,7 @@ module.exports = {
     color: "white",
     fontFamily: 'Raleway',
     padding: 10
-  }, 
+  },
   homepageStyle: {
     fontFamily: "Raleway",
     padding: 10,
