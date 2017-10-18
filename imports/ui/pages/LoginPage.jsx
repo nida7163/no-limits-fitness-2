@@ -33,7 +33,10 @@ export default class LoginPage extends Component {
 
     const buttonStyle = {
       marginTop: "20px",
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4c39c191a74fd5724a40197e9296676ea61d00f2
     }
 
     return (

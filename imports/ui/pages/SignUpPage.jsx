@@ -32,7 +32,8 @@ export default class SignUpPage extends Component {
   render(){
 
     const buttonStyle = {
-      marginTop: "20px"
+      marginTop: "20px",
+      backgroundColor:"#DAA520"
     }
 
     return (
