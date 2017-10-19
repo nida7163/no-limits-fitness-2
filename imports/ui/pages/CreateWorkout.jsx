@@ -21,6 +21,9 @@ import AddWorkoutSecondary from '../components/AddWorkoutSecondary';
 import Store from '../../reducers/index';
 import setSnackBar from '../../actions/snackbar.js';
 
+// Import Style
+import style from '../../../client/styles.js';
+
 
 
 // Page Component
@@ -265,7 +268,7 @@ class CreateWorkout extends Component {
         {/* Name the Routine */}
         <Row>
           <AddRoutineName _changeRoutineName={this._changeRoutineName.bind(this)} />
-          
+
         </Row>
 
 
@@ -347,9 +350,9 @@ class CreateWorkout extends Component {
         <Row>
           <center>
             <Row>
-              <RaisedButton label="Submit" primary={false} onClick={this._uploadRoutine.bind(this)} />
+              <RaisedButton label="Submit" overlayStyle={style.overlayStyleSignUp} primary={false} onClick={this._uploadRoutine.bind(this)} />
               <span> </span>
-              <RaisedButton label="Cancel" onClick={this._cancelRoutine.bind(this)} />
+              <RaisedButton label="Cancel"  overlayStyle={style.overlayStyleLoginIn} onClick={this._cancelRoutine.bind(this)} />
             </Row>
           </center>
         </Row>

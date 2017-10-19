@@ -228,7 +228,7 @@ class LogWorkout extends Component {
         <Row>
           <center>
             <Row>
-              <RaisedButton label="Submit" overlayStyle={style.overlayStyleLoginIn} primary={false} onClick={this._uploadWorkout.bind(this)} />
+              <RaisedButton label="Submit" overlayStyle={style.overlayStyleSignUp} primary={false} onClick={this._uploadWorkout.bind(this)} />
               <span> </span>
               <RaisedButton label="Cancel" overlayStyle={style.overlayStyleLoginIn} onClick={this._cancelWorkout.bind(this)} />
             </Row>
