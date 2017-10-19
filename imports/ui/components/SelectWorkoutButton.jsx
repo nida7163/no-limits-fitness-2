@@ -22,7 +22,7 @@ class SelectWorkoutButton extends Component {
     return(
       <div>
         <br />
-        <RaisedButton label={this.props._workoutName} primary={true} onClick={this._handleClick.bind(this)} />
+        <RaisedButton label={this.props._workoutName} primary={false} onClick={this._handleClick.bind(this)} />
         <br />
       </div>
     )

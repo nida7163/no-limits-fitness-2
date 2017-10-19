@@ -22,36 +22,38 @@ var NavBar = React.createClass({
     Meteor.logout(function(err){
       if(!err){
         browserHistory.push('/users/login');
-        Store.dispatch(setSnackBar(true, 'You\'ve been signed out successfully.', '#4CAF50'));
+        Store.dispatch(setSnackBar(true, 'You\'ve been signed out successfully.', '#DAA520'));
       }
     });
   },
 
 
+
   render: function() {
     return (
-      
+
       <AppBar
         className= "navbar"
-        title= "No Limits Fitness 2.0"
+        title= "Swolely Grail"
         onLeftIconButtonTouchTap= {this._toggleAppDrawer}
         zDepth= {1}
         onTitleTouchTap= {this._goToDashboard}
         style= {{
           position: 'fixed', top: 0,
-          backgroundColor: '#263238' 
+          backgroundColor:'black'
         }}
         titleStyle = {{
           textAlign: 'center',
-          fontFamily: 'Raleway',
+          fontFamily: 'Nova Flat',
+          color:'#D50000',
           fontSize: 40,
           padding: 10
         }}
         iconElementRight = { Meteor.user() != null ? <FlatButton label="Log Out" /> : <FlatButton label="Login" />}
-        onRightIconButtonTouchTap = {this._handleLogout} 
+        onRightIconButtonTouchTap = {this._handleLogout}
       />
 
-    ); 
+    );
   }
 });
 
