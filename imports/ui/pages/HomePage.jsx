@@ -31,7 +31,7 @@ class HomePage extends Component {
         <div style={style.homepageStyleDiv}>
 
           <Card>
-            <CardHeader title="Welcome to Swoley Grail!
+            <CardHeader title="Welcome to Swolely Grail!
               Tracking your workout progress just got 10 sets easier! We've made it easier for you to create personalized routines and log your workouts.
               To get started please signup and if you're a returning user simply login." titleStyle={style.homepageStyle}
             />

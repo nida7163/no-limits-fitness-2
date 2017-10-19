@@ -34,7 +34,7 @@ var NavBar = React.createClass({
 
       <AppBar
         className= "navbar"
-        title= "Swoley Grail"
+        title= "Swolely Grail"
         onLeftIconButtonTouchTap= {this._toggleAppDrawer}
         zDepth= {1}
         onTitleTouchTap= {this._goToDashboard}
