@@ -17,6 +17,9 @@ import UnitsDropDownMenu from '../components/UnitsDropDownMenu';
 import AddRepPrimary from '../components/AddRepPrimary';
 import AddRepSecondary from '../components/AddRepSecondary';
 
+// Import Style
+import style from '../../../client/styles.js';
+
 
 // Create Component
 class AddExerciseSecondary extends Component {
@@ -31,7 +34,7 @@ class AddExerciseSecondary extends Component {
   }
 
   _handleClick(){
-    // Remove targetted Excerise from the selected Workout 
+    // Remove targetted Excerise from the selected Workout
     this.props._removeSelectedExercise(this.props._iOfWorkout, this.props._iOfExcerise);
   }
 
@@ -41,7 +44,7 @@ class AddExerciseSecondary extends Component {
         <CardHeader
           actAsExpander={false}
           showExpandableButton={true}
-          avatar={<FloatingActionButton onClick={this._handleClick.bind(this)} secondary={true} mini={true}><ContentRemove/></FloatingActionButton>}
+          avatar={<FloatingActionButton onClick={this._handleClick.bind(this)} iconStyle={style.iconStyle} secondary={true} mini={true}><ContentRemove/></FloatingActionButton>}
           title={
             <Container>
               <TextField
@@ -50,13 +53,14 @@ class AddExerciseSecondary extends Component {
                 floatingLabelText="Excercise Name"
                 hintText="Bench Press"
                 fullWidth={true}
+                floatingLabelFocusStyle={style.floatingLabelPassword}
               />
               <UnitsDropDownMenu
                 _submissionObject={this.props._submissionObject}
 
                 _iOfWorkout={this.props._iOfWorkout}
                 _iOfExercise={this.props._iOfExercise}
-                
+
                 _editExerciseUnits={this.props._editExerciseUnits.bind(this)}
               />
             </Container>
@@ -85,12 +89,12 @@ class AddExerciseSecondary extends Component {
                   </div>
                 );
               }
-              
+
               // Then, render any additional excercises
               else{
                 return(
                   <div key={"workout-" + this.props._iOfWorkout + "-excercise-" + this.props._iOfExercise + "-rep-" + i}>
-                    
+
                     <AddRepSecondary
                       _iOfWorkout={this.props._iOfWorkout}
                       _iOfExercise={this.props._iOfExercise}
@@ -114,4 +118,4 @@ class AddExerciseSecondary extends Component {
 }
 
 
-export default AddExerciseSecondary;                          
+export default AddExerciseSecondary;

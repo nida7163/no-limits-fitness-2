@@ -33,7 +33,6 @@ export default class SignUpPage extends Component {
 
     const buttonStyle = {
       marginTop: "20px",
-      backgroundColor:"#DAA520"
     }
 
     return (
@@ -44,17 +43,23 @@ export default class SignUpPage extends Component {
         <form name="loginForm" id="signup-form" className="col-xs-12 col-lg-6 col-lg-offset-3">
           <TextField
             hintText="Please enter your username"
+            hintStyle={style.hintStyle}
             floatingLabelText="Username"
             id="signup-name"
             fullWidth={true}
+            floatingLabelFocusStyle={style.floatingLabelUsername}
+            inputStyle={style.inputStyleUsername}
           />
           <br />
           <TextField
             hintText="Please enter your password"
+            hintStyle={style.hintStyle}
             floatingLabelText="Password"
             type="password"
             id="signup-password"
             fullWidth={true}
+            floatingLabelFocusStyle={style.floatingLabelPassword}
+            inputStyle={style.inputStyleUsername}
           />
           <br />
           <RaisedButton

@@ -9,7 +9,7 @@ import { browserHistory } from 'react-router';
 // Import React Grid System
 import { Container, Row, Col, Visible, Hidden } from 'react-grid-system';
 
-// Import Material-ui 
+// Import Material-ui
 import RaisedButton from 'material-ui/RaisedButton';
 import { Card, CardActions, CardHeader, CardText } from 'material-ui/Card';
 
@@ -44,9 +44,9 @@ class SelectWorkout extends Component {
         this.setState({workouts: res});
 
       }.bind(this));
-      
+
     }.bind(this));
-    
+
   }
 
 
@@ -61,23 +61,23 @@ class SelectWorkout extends Component {
     }
 
     // Change path to log page and pass (stringified) data to the log page
-    browserHistory.push({ 
+    browserHistory.push({
       pathname: '/workout/log',
       query: {workoutObj: JSON.stringify(workoutObj), routineName: this.state.routineName}
-    }); 
+    });
 
   }
 
   _reRouteToCreate(){
     // Takes you to the create page
-    browserHistory.push({ 
+    browserHistory.push({
       pathname: '/workout/create'
     });
   }
 
   _cancelSelection(){
     // Cancel takes you back to dashboard, no selection is made
-    browserHistory.push({ 
+    browserHistory.push({
       pathname: '/dashboard'
     });
   }
@@ -107,7 +107,7 @@ class SelectWorkout extends Component {
                   }.bind(this))}
               {/* ++++++++++++++++++++++++++++++++++++++++++++ */}
               <br />
-              <RaisedButton secondary={true} label="Create new Routine" onClick={this._reRouteToCreate.bind(this)} />
+              <RaisedButton secondary={true} label="Create new Routine" overlayStyle={style.overlayStyleSignUp} onClick={this._reRouteToCreate.bind(this)} />
               <br /><br />
             </center>
           </Card>
@@ -120,7 +120,7 @@ class SelectWorkout extends Component {
         <Row>
           <center>
             <Row>
-              <RaisedButton label="Cancel" onClick={this._cancelSelection.bind(this)} />
+              <RaisedButton  label="Cancel" overlayStyle={style.overlayStyleLoginIn} onClick={this._cancelSelection.bind(this)} />
             </Row>
           </center>
         </Row>
@@ -132,4 +132,3 @@ class SelectWorkout extends Component {
 };
 
 export default SelectWorkout;
-

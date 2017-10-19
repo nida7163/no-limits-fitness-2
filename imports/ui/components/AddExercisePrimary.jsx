@@ -44,7 +44,7 @@ class AddExercisePrimary extends Component {
         <CardHeader
           actAsExpander={false}
           showExpandableButton={true}
-          avatar={<FloatingActionButton onClick={this._handleClick.bind(this)} secondary={false} mini={true}><ContentAdd/></FloatingActionButton>}
+          avatar={<FloatingActionButton onClick={this._handleClick.bind(this)} iconStyle={style.iconStyle} secondary={false} mini={true}><ContentAdd/></FloatingActionButton>}
           title={
             <Container>
               <TextField
@@ -53,6 +53,8 @@ class AddExercisePrimary extends Component {
                 floatingLabelText="Excercise Name"
                 hintText="Bench Press"
                 fullWidth={true}
+                floatingLabelFocusStyle={style.floatingLabelPassword}
+                underlineFocusStyle={style.underlineFocusStyle}
               />
               <UnitsDropDownMenu
                 _submissionObject={this.props._submissionObject}

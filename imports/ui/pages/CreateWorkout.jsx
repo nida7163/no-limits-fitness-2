@@ -265,6 +265,7 @@ class CreateWorkout extends Component {
         {/* Name the Routine */}
         <Row>
           <AddRoutineName _changeRoutineName={this._changeRoutineName.bind(this)} />
+          
         </Row>
 
 

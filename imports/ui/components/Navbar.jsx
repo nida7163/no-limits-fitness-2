@@ -3,6 +3,7 @@ import { IndexLink, Link, browserHistory } from 'react-router';
 import AppBar from 'material-ui/AppBar';
 import FlatButton from 'material-ui/FlatButton';
 import Store from '../../reducers/index.js';
+import style from '../../../client/styles.js';
 
 var NavBar = React.createClass({
 
@@ -40,25 +41,17 @@ var NavBar = React.createClass({
         onTitleTouchTap= {this._goToDashboard}
         style= {{
           position: 'fixed', top: 0,
-<<<<<<< HEAD
           backgroundColor:'black',
-=======
-          backgroundColor:'black'
->>>>>>> 4c39c191a74fd5724a40197e9296676ea61d00f2
         }}
         titleStyle = {{
           textAlign: 'center',
           fontFamily: 'Nova Flat',
-<<<<<<< HEAD
           color:'#DAA520',
-=======
-          color:'#D50000',
->>>>>>> 4c39c191a74fd5724a40197e9296676ea61d00f2
           fontSize: 40,
           padding: 10
         }}
         iconElementRight = { Meteor.user() != null ? <FlatButton label="Log Out" /> : <FlatButton label="Login" />}
-        onRightIconButtonTouchTap = {this._handleLogout}
+        onRightIconButtonTouchTap = {this._handleLogout} 
       />
 
     );

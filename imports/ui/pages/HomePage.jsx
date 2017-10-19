@@ -20,9 +20,6 @@ class HomePage extends Component {
 
     const buttonStyle = {
       margin: '10px',
-      fontFamily: 'Nova Flat',
-      backgroundColor:'#DAA520',
-      color:'red'
 
     }
 
@@ -38,22 +35,17 @@ class HomePage extends Component {
             <CardActions>
               <Row>
                 <center>
-<<<<<<< HEAD
+
                   <RaisedButton overlayStyle={style.overlayStyleSignUp} label="Signup" secondary={false} href="users/signup"/>
                   <RaisedButton overlayStyle={style.overlayStyleLoginIn} label="Login" primary={false} href="users/login"/>
-=======
-                  <RaisedButton style={style.buttonStyle} label="Signup" secondary={false} href="users/signup"/>
-                  <RaisedButton style={style.buttonStyle} label="Login" primary={false} href="users/login"/>
->>>>>>> 4c39c191a74fd5724a40197e9296676ea61d00f2
+
                 </center>
               </Row>
             </CardActions>
             <CardMedia>
-<<<<<<< HEAD
+
               <img src="img/workout.gif" />
-=======
-              <img src="img/gym.jpg" />
->>>>>>> 4c39c191a74fd5724a40197e9296676ea61d00f2
+
             </CardMedia>
           </Card>
 

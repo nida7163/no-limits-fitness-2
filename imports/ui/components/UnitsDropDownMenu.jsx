@@ -2,7 +2,7 @@
 import React from 'react';
 import { Component } from 'react';
 
-// Import Material-ui 
+// Import Material-ui
 import MenuItem from 'material-ui/MenuItem';
 import SelectField from 'material-ui/SelectField';
 

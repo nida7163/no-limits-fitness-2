@@ -36,6 +36,7 @@ class AddRoutineName extends Component {
             floatingLabelText="Routine Name"
             hintText="My Fitness Plan"
             fullWidth={true}
+            floatingLabelFocusStyle={style.floatingLabelPassword}
           />
         </CardHeader>
       </Card>

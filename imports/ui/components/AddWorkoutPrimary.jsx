@@ -16,6 +16,9 @@ import ContentRemove from 'material-ui/svg-icons/content/remove';
 import AddExercisePrimary from '../components/AddExercisePrimary';
 import AddExerciseSecondary from '../components/AddExerciseSecondary';
 
+// Import Style
+import style from '../../../client/styles.js';
+
 
 // Create Component
 class AddWorkoutPrimary extends Component {
@@ -46,7 +49,7 @@ class AddWorkoutPrimary extends Component {
         <CardHeader
           actAsExpander={false}
           showExpandableButton={true}
-          avatar={<FloatingActionButton onClick={this._handleClick.bind(this)} secondary={false} mini={true}><ContentAdd/></FloatingActionButton>}
+          avatar={<FloatingActionButton onClick={this._handleClick.bind(this)} iconStyle={style.iconStyle} secondary={false} mini={true}><ContentAdd/></FloatingActionButton>}
           title={
             <TextField
               onChange={this._handleChange.bind(this)}
@@ -54,6 +57,7 @@ class AddWorkoutPrimary extends Component {
               floatingLabelText="Workout Name"
               hintText="Chest Day"
               fullWidth={true}
+              floatingLabelFocusStyle={style.floatingLabelPassword}
             />
           }
         />

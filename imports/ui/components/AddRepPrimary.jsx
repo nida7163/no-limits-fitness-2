@@ -40,9 +40,9 @@ class AddRepPrimary extends Component {
         <CardHeader
           avatar={
             <div>
-              <FloatingActionButton onClick={this._handleAddClick.bind(this)} secondary={false} mini={true}><ContentAdd/></FloatingActionButton>
+              <FloatingActionButton onClick={this._handleAddClick.bind(this)} iconStyle={style.iconStyle}  secondary={false} mini={true}><ContentAdd/></FloatingActionButton>
               <i> </i>
-              <FloatingActionButton onClick={this._handleRemoveClick.bind(this)} secondary={true} mini={true}><ContentRemove/></FloatingActionButton>
+              <FloatingActionButton onClick={this._handleRemoveClick.bind(this)} iconStyle={style.iconStyletwo} secondary={true} mini={true}><ContentRemove/></FloatingActionButton>
               <i> </i>
             </div>
           }
@@ -55,6 +55,7 @@ class AddRepPrimary extends Component {
               min="0"
               hintText="15"
               fullWidth={true}
+              floatingLabelFocusStyle={style.floatingLabelPassword}
             />
           }
           title={<div style={style.addRepComponentStyle}><i> Please leave the Reps field empty if you plan to Lift Until Failure (xf) </i> </div>}

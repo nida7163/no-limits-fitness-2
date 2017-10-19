@@ -32,6 +32,7 @@ class AddRepSecondary extends Component {
               min="0"
               hintText="15"
               fullWidth={true}
+              floatingLabelFocusStyle={style.floatingLabelPassword}
             />
           }
         />

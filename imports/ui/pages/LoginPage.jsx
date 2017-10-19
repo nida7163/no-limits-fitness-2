@@ -33,10 +33,6 @@ export default class LoginPage extends Component {
 
     const buttonStyle = {
       marginTop: "20px",
-<<<<<<< HEAD
-
-=======
->>>>>>> 4c39c191a74fd5724a40197e9296676ea61d00f2
     }
 
     return (
@@ -50,6 +46,8 @@ export default class LoginPage extends Component {
             floatingLabelText="Username"
             id="login-name"
             fullWidth={true}
+            floatingLabelFocusStyle={style.floatingLabelUsername}
+            inputStyle={style.inputStyleUsername}
           />
           <br />
           <TextField
@@ -58,6 +56,9 @@ export default class LoginPage extends Component {
             type="password"
             id="login-password"
             fullWidth={true}
+            floatingLabelFocusStyle={style.floatingLabelPassword}
+            inputStyle={style.inputStyleUsername}
+
           />
           <br />
           <RaisedButton

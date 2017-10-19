@@ -164,9 +164,9 @@ class UserProfile extends Component{
 				    	<Row>
 				    		<div>
 						    	<center>
-						    		<RaisedButton label="Create New Routine" secondary={false} style={style.buttonStyle}  onClick={this._goToCreateWorkout}/>
+						    		<RaisedButton label="Create New Routine" secondary={false} overlayStyle={style.overlayStyleSignUp} onClick={this._goToCreateWorkout}/>
 				         		<i> </i>
-				         			<RaisedButton label="Go back to Dashboard" primary={false} style={style.buttonStyle}  href="/dashboard"/>
+				         			<RaisedButton label="Go back to Dashboard" primary={false} overlayStyle={style.overlayStyleLoginIn}  href="/dashboard"/>
 						    	</center>
 					    	</div>
 				    	</Row>
@@ -190,9 +190,11 @@ class UserProfile extends Component{
 				    		Age: <span>{this.state.age}</span>
 				         	<TextField
 				            hintText="Please enter your age in years."
+										hintStyle={style.hintStyle}
 				            floatingLabelText="Age"
 				            id="age"
 				            fullWidth={true}
+										floatingLabelFocusStyle={style.floatingLabelPassword}
 			         		/>
 			         		</center>
 				    		</Col>
@@ -200,18 +202,22 @@ class UserProfile extends Component{
 				    			Height [in]: <span>{this.state.height}</span>
 						    	 <TextField
 				            hintText="Please enter your height in inches."
+										hintStyle={style.hintStyle}
 				            floatingLabelText="Height"
 				            id="height"
 				            fullWidth={true}
+										floatingLabelFocusStyle={style.floatingLabelPassword}
 			         		/>
 				    		</Col>
 				    		<Col md={4}>
 				    			Weight [lb]: <span>{this.state.weight}</span>
 				         	<TextField
 				            hintText="Please enter your weight in pounds."
+										hintStyle={style.hintStyle}
 				            floatingLabelText="Weight"
 				            id="weight"
 				            fullWidth={true}
+										floatingLabelFocusStyle={style.floatingLabelPassword}
 			         		/>
 
 				    		</Col>
@@ -226,6 +232,7 @@ class UserProfile extends Component{
 				            label="submit"
 				            primary={false}
 				            onTouchTap={this.handleSubmit.bind(this)}
+										overlayStyle={style.overlayStyle}
 				         />
 				         <br/>
 			         </center>

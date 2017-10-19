@@ -16,6 +16,11 @@ import ContentRemove from 'material-ui/svg-icons/content/remove';
 import AddExercisePrimary from '../components/AddExercisePrimary';
 import AddExerciseSecondary from '../components/AddExerciseSecondary';
 
+// Import Style
+import style from '../../../client/styles.js';
+
+
+
 
 // Create Component
 class AddWorkoutSecondary extends Component {
@@ -45,7 +50,7 @@ class AddWorkoutSecondary extends Component {
         <CardHeader
           actAsExpander={false}
           showExpandableButton={true}
-          avatar={<FloatingActionButton onClick={this._handleClick.bind(this)} secondary={true} mini={true}><ContentRemove/></FloatingActionButton>}
+          avatar={<FloatingActionButton onClick={this._handleClick.bind(this)} iconStyle={style.iconStyletwo} secondary={true} mini={true}><ContentRemove/></FloatingActionButton>}
           title={
             <TextField
               value={this.props._workoutName}
@@ -53,6 +58,7 @@ class AddWorkoutSecondary extends Component {
               floatingLabelText="Workout Name"
               hintText="Chest Day"
               fullWidth={true}
+              floatingLabelFocusStyle={style.floatingLabelPassword}
             />
           }
         />
@@ -94,7 +100,7 @@ class AddWorkoutSecondary extends Component {
 
                       _iOfWorkout={this.props._iOfWorkout}
                       _iOfExercise={i}
-                      
+
                       _removeSelectedExercise={this.props._removeSelectedExercise.bind(this)}
                       _editExerciseName={this.props._editExerciseName.bind(this)}
                       _editExerciseUnits={this.props._editExerciseUnits.bind(this)}
@@ -119,4 +125,4 @@ class AddWorkoutSecondary extends Component {
 }
 
 
-export default AddWorkoutSecondary;                          
+export default AddWorkoutSecondary;
