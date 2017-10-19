@@ -1,37 +1,109 @@
 module.exports = {
-
   loginStyle: {
-    backgroundColor: "white"
+    backgroundImage: "url('/img/gym.jpg')",
+    backgroundSize: "center center no-repeat",
+    border: "10px #DAA520 solid",
+    fontFamily: "Nova Flat",
+    color: "#FF0000"
+  },
+  Card: {
+    color: "#DAA520",
+    fontFamily: "Nova Flat"
   },
   signupStyle: {
-    backgroundColor: "white"
+    backgroundImage: "url('/img/gym.jpg')",
+    fontFamily: "Nova Flat",
+    color: "#DAA520",
+    border: "10px #FF0000 solid"
   },
   headerStyle: {
     paddingTop: 20
   },
   dashNavStyle: {
     paddingTop: 30,
-    paddingBottom: 20
+    paddingBottom: 20,
+    fontFamily: "Nova Flat",
+    color: "#DAA520"
   },
   drawerStyle: {
-    backgroundImage: "url('img/background.jpg')"
+    backgroundColor: "black",
+    fontFamily: "Nova Flat"
   },
   linkStyle: {
-    color: "white",
-    fontFamily: 'Raleway',
+    color: "#FF0000",
+    fontFamily: 'Nova Flat',
+    backgroundColor: "#DAA520",
     padding: 10
   },
   homepageStyle: {
-    fontFamily: "Raleway",
+    fontFamily: 'Nova Flat',
+    color: "#FF0000",
+    backgroundColor: "black",
+    padding: 10,
+    fontSize: 20,
+    marginLeft: "3em"
+  },
+  cardStyle:{
+    backgroundColor:"black"
+  },
+  overlayStyle: {
+    backgroundColor: "#DAA520",
+    labelColor: "#DAA520",
+    fontFamily: "Nova Flat",
     padding: 10,
     fontSize: 20
   },
+  overlayStyleSignUp: {
+    backgroundColor: "#DAA520",
+    color: "#FF0000",
+    fontFamily: "Nova Flat",
+  },
+  overlayStyleLoginIn: {
+    backgroundColor: "#FF0000",
+    color: "#DAA520",
+    fontFamily: "Nova Flat"
+  },
+  floatingLabelUsername:{
+    color:"#DAA520"
+    },
+  floatingLabelPassword:{
+      color:"#DAA520",
+      hoverColor:"red"
+      },
+  inputStyleUsername:{
+        color:"#FF0000"
+        },
+  iconStyle:{
+          backgroundColor:"#DAA520",
+          fill:"#FF0000"
+        },
+  iconStyletwo:{
+          backgroundColor:"#FF0000",
+          fill:"#DAA520"
+              },
+  hintStyle:{
+        color:"#FF0000",
+        fontFamily: "Nova Flat"
+  },
+  underlineFocusStyle:{
+    color:"goldenrod"
+  },
+  buttonStyle: {
+    fontFamily: 'Nova Flat',
+    backgroundColor: "#DAA520",
+    padding: 10,
+    fontSize: 20
+  },
+  homepageStyleDiv: {
+    border: " 1em #DAA520 solid"
+  },
   profileTitleStyle: {
     textAlign: "center",
-    fontFamily: 'Raleway'
+    fontFamily: 'Nova Flat',
+    color: "#FF0000"
   },
   dropdownStyle: {
-    fontFamily: 'Raleway',
+    fontFamily: 'Nova Flat',
     fontSize: 20,
     padding: 10
   },
@@ -39,45 +111,54 @@ module.exports = {
     paddingBottom: 10
   },
   routineName: {
-    fontFamily: 'Raleway',
-    fontSize: 20,
-    textAlign: "center"
-  },
-  selectTitle: {
-    fontFamily: 'Raleway',
-    textAlign: "center"
-  },
-  cardTextStyle: {
-    fontFamily: 'Raleway',
+    fontFamily: 'Nova Flat',
     fontSize: 20,
     textAlign: "center",
-    padding: 20
+    color: "#DAA520"
+  },
+  selectTitle: {
+    fontFamily: 'Nova Flat',
+    textAlign: "center",
+    color: "#DAA520"
+  },
+  cardTextStyle: {
+    fontFamily: 'Nova Flat',
+    fontSize: 20,
+    textAlign: "center",
+    padding: 20,
+    color: "#DAA520"
   },
   logRoutineHeaderStyle: {
-    fontFamily: "Raleway",
-    padding: 10
+    fontFamily: 'Nova Flat',
+    padding: 10,
+    color: "#DAA520"
   },
   logRoutineComponentStyle: {
-    fontFamily: "Raleway",
+    fontFamily: 'Nova Flat',
     paddingLeft: 10,
-    paddingRight: 10
+    paddingRight: 10,
+    color: "#DAA520",
   },
   addRepComponentStyle: {
-    fontFamily: "Raleway",
+    fontFamily: 'Nova Flat',
     paddingLeft: 15,
     paddingTop: 15
   },
   progressDropDown: {
     position: "relative",
     left: 150,
-    fontFamily: 'Raleway',
+    fontFamily: 'Nova Flat',
     fontSize: 20
   },
   menuDropdown: {
-    fontFamily: 'Raleway',
+    fontFamily: 'Nova Flat',
     fontSize: 14,
     padding: 5
-
-  }
+  },
+  overlaySelectWorkout:{
+    backgroundColor: "black",
+    color:"#DAA520",
+    fontFamily: "Nova Flat",
+    },
 
 }

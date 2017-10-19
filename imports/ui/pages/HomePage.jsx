@@ -20,9 +20,6 @@ class HomePage extends Component {
 
     const buttonStyle = {
       margin: '10px',
-      fontFamily: 'Nova Flat',
-      backgroundColor:'#DAA520',
-      color:'red'
 
     }
 
@@ -30,8 +27,8 @@ class HomePage extends Component {
       <Container>
         <div style={style.homepageStyleDiv}>
 
-          <Card>
-            <CardHeader title="Welcome to Swolely Grail!
+          <Card style={style.cardStyle}>
+            <CardHeader title="Welcome to Swolely Grail! A workout junkie's BFF.
               Tracking your workout progress just got 10 sets easier! We've made it easier for you to create personalized routines and log your workouts.
               To get started please signup and if you're a returning user simply login." titleStyle={style.homepageStyle}
             />
@@ -39,12 +36,14 @@ class HomePage extends Component {
               <Row>
                 <center>
 
-                  <RaisedButton style={style.buttonStyle} label="Signup" secondary={false} href="users/signup"/>
-                  <RaisedButton style={style.buttonStyle} label="Login" primary={false} href="users/login"/>
+                  <RaisedButton overlayStyle={style.overlayStyleSignUp} label="Signup" secondary={false} href="users/signup"/>
+                  <RaisedButton overlayStyle={style.overlayStyleLoginIn} label="Login" primary={false} href="users/login"/>
+
                 </center>
               </Row>
             </CardActions>
             <CardMedia>
+
               <img src="img/workout.gif" />
 
             </CardMedia>

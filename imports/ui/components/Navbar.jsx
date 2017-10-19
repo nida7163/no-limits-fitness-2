@@ -3,6 +3,7 @@ import { IndexLink, Link, browserHistory } from 'react-router';
 import AppBar from 'material-ui/AppBar';
 import FlatButton from 'material-ui/FlatButton';
 import Store from '../../reducers/index.js';
+import style from '../../../client/styles.js';
 
 var NavBar = React.createClass({
 
@@ -40,12 +41,13 @@ var NavBar = React.createClass({
         onTitleTouchTap= {this._goToDashboard}
         style= {{
           position: 'fixed', top: 0,
-          backgroundColor:'black'
+          backgroundColor:'black',
+          hoverColor:"goldenrod"
         }}
         titleStyle = {{
           textAlign: 'center',
           fontFamily: 'Nova Flat',
-          color:'#D50000',
+          color:'#DAA520',
           fontSize: 40,
           padding: 10
         }}

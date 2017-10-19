@@ -16,6 +16,9 @@ import LogExercise from '../components/LogExercise';
 import Store from '../../reducers/index';
 import setSnackBar from '../../actions/snackbar.js';
 
+// Import Style
+import style from '../../../client/styles.js';
+
 
 
 // Page Component
@@ -174,7 +177,7 @@ class LogWorkout extends Component {
 
   render() {
     return (
-      <Container>
+      <Container style={style.dateStyle}>
 
         {/* Title with Date Picker */}
         <Row>
@@ -225,9 +228,9 @@ class LogWorkout extends Component {
         <Row>
           <center>
             <Row>
-              <RaisedButton label="Submit" primary={false} onClick={this._uploadWorkout.bind(this)} />
+              <RaisedButton label="Submit" overlayStyle={style.overlayStyleSignUp} primary={false} onClick={this._uploadWorkout.bind(this)} />
               <span> </span>
-              <RaisedButton label="Cancel" onClick={this._cancelWorkout.bind(this)} />
+              <RaisedButton label="Cancel" overlayStyle={style.overlayStyleLoginIn} onClick={this._cancelWorkout.bind(this)} />
             </Row>
           </center>
         </Row>
