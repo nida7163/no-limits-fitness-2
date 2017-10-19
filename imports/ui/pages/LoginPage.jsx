@@ -46,6 +46,8 @@ export default class LoginPage extends Component {
             floatingLabelText="Username"
             id="login-name"
             fullWidth={true}
+            floatingLabelFocusStyle={style.floatingLabelUsername}
+            inputStyle={style.inputStyleUsername}
           />
           <br />
           <TextField
@@ -54,6 +56,9 @@ export default class LoginPage extends Component {
             type="password"
             id="login-password"
             fullWidth={true}
+            floatingLabelFocusStyle={style.floatingLabelPassword}
+            inputStyle={style.inputStyleUsername}
+
           />
           <br />
           <RaisedButton
