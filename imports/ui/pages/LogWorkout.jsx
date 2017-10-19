@@ -177,7 +177,7 @@ class LogWorkout extends Component {
 
   render() {
     return (
-      <Container>
+      <Container style={style.dateStyle}>
 
         {/* Title with Date Picker */}
         <Row>

@@ -27,8 +27,8 @@ class HomePage extends Component {
       <Container>
         <div style={style.homepageStyleDiv}>
 
-          <Card>
-            <CardHeader title="Welcome to No Limits Fitness 2.0! A workout junkie's BFF.
+          <Card style={style.cardStyle}>
+            <CardHeader title="Welcome to Swolely Grail! A workout junkie's BFF.
               Tracking your workout progress just got 10 sets easier! We've made it easier for you to create personalized routines and log your workouts.
               To get started please signup and if you're a returning user simply login." titleStyle={style.homepageStyle}
             />

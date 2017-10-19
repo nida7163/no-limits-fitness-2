@@ -11,12 +11,9 @@ module.exports = {
     fontFamily: "Nova Flat"
   },
   signupStyle: {
-    backgroundImage: "url('/img/squat.jpg')",
-    textAlign: "center",
+    backgroundImage: "url('/img/gym.jpg')",
     fontFamily: "Nova Flat",
-    color: "#FF0000",
-    backgroundSize: "45%",
-    backgroundRepeat: "round",
+    color: "#DAA520",
     border: "10px #FF0000 solid"
   },
   headerStyle: {
@@ -45,6 +42,9 @@ module.exports = {
     padding: 10,
     fontSize: 20,
     marginLeft: "3em"
+  },
+  cardStyle:{
+    backgroundColor:"black"
   },
   overlayStyle: {
     backgroundColor: "#DAA520",
@@ -137,7 +137,7 @@ module.exports = {
     fontFamily: 'Nova Flat',
     paddingLeft: 10,
     paddingRight: 10,
-    color: "#DAA520"
+    color: "#DAA520",
   },
   addRepComponentStyle: {
     fontFamily: 'Nova Flat',
@@ -155,4 +155,10 @@ module.exports = {
     fontSize: 14,
     padding: 5
   },
+  overlaySelectWorkout:{
+    backgroundColor: "black",
+    color:"#DAA520",
+    fontFamily: "Nova Flat",
+    },
+
 }

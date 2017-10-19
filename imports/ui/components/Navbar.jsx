@@ -35,13 +35,14 @@ var NavBar = React.createClass({
 
       <AppBar
         className= "navbar"
-        title= "No Limits Fitness 2.0"
+        title= "Swolely Grail"
         onLeftIconButtonTouchTap= {this._toggleAppDrawer}
         zDepth= {1}
         onTitleTouchTap= {this._goToDashboard}
         style= {{
           position: 'fixed', top: 0,
           backgroundColor:'black',
+          hoverColor:"goldenrod"
         }}
         titleStyle = {{
           textAlign: 'center',
@@ -51,7 +52,7 @@ var NavBar = React.createClass({
           padding: 10
         }}
         iconElementRight = { Meteor.user() != null ? <FlatButton label="Log Out" /> : <FlatButton label="Login" />}
-        onRightIconButtonTouchTap = {this._handleLogout} 
+        onRightIconButtonTouchTap = {this._handleLogout}
       />
 
     );
