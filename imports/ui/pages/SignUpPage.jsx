@@ -13,7 +13,7 @@ export default class SignUpPage extends Component {
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
-
+  
   handleSubmit(e){
     e.preventDefault();
     let name = document.getElementById("signup-name").value;
