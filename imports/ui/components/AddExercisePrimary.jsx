@@ -13,7 +13,7 @@ import ContentAdd from 'material-ui/svg-icons/content/add';
 import ContentRemove from 'material-ui/svg-icons/content/remove';
 
 // Import Components
-import UnitsDropDownMenu from '../components/UnitsDropDownMenu';
+// import UnitsDropDownMenu from '../components/UnitsDropDownMenu';
 import AddRepPrimary from '../components/AddRepPrimary';
 import AddRepSecondary from '../components/AddRepSecondary';
 
@@ -54,15 +54,14 @@ class AddExercisePrimary extends Component {
                 hintText="Bench Press"
                 fullWidth={true}
               />
-              <UnitsDropDownMenu
-                _submissionObject={this.props._submissionObject}
-
-                _iOfWorkout={this.props._iOfWorkout}
-                _iOfExercise={this.props._iOfExercise}
-                
-                _editExerciseUnits={this.props._editExerciseUnits.bind(this)}
-              />
-            </Container>
+              <TextField
+              // onChange={this._handleChange.bind(this)}
+              value={this.props._amountLifted}
+              floatingLabelText="Amount Lifted"
+              hintText="Pounds"
+              fullWidth={true}
+            />
+           </Container>
           }
         />
         <CardText expandable={true}>
