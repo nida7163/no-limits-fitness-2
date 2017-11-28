@@ -2,7 +2,7 @@
 Swolely Grai is a a mobile-responsive application that allows users to create custom workout routines and track their progress to help build a healthier, happier self.
 
 ## How Does It Work?
-First things first, users visit the home page and create an account. From there, users logged in can make a routine, and insert their progress during each workout. The application can work both on your computer as well as mobile device.
+Users visit the home page and create an account. From there, users logged in can make a routine, and insert their progress during each workout. The application can work both on your computer as well as mobile device.
 
 ## Clone This Repo To Your Machine
 - Have MongoDB and Meteor set up on your laptop. (_If you're unfamiliar with how to download either, Google will be your best friend!_)
