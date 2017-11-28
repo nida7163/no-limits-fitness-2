@@ -16,3 +16,5 @@ https://swolely-grail.herokuapp.com
 ## Authors
 Nida Chaudhry, Chase Eidam, Andrew Marsh,  Gerald Perriman
 
+Final Project - Georgia Tech Coding Bootcamp April 2017
+
